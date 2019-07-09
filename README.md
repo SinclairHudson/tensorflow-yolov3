@@ -35,7 +35,6 @@ $ python freeze_graph.py
 $ python image_demo.py
 $ python video_demo.py # if use camera, set video_path = 0
 ```
-![image](./docs/images/611_result.jpg)
 ## part 3. Train on your own dataset
 Two files are required as follows:
 
