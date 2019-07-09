@@ -1,6 +1,6 @@
-## part 1. Introduction
+## Introduction
 
-Implementation of YOLO v3 object detector in Tensorflow. The full details are in [this paper](https://pjreddie.com/media/files/papers/YOLOv3.pdf).  In this project we cover several segments as follows:<br>
+This repository is an implementation of YOLO v3 object detection in Tensorflow. The full details are in [this paper](https://pjreddie.com/media/files/papers/YOLOv3.pdf).  In this project we cover several segments as follows:<br>
 - [x] [YOLO v3 architecture](https://github.com/YunYang1994/tensorflow-yolov3/blob/master/core/yolov3.py)
 - [x] [Training tensorflow-yolov3 with GIOU loss function](https://giou.stanford.edu/)
 - [x] Basic working demo
@@ -124,9 +124,13 @@ $ wget http://images.cocodataset.org/zips/test2017.zip
 $ wget http://images.cocodataset.org/annotations/image_info_test2017.zip 
 ```
 
-## part 4. Why it is so magical ?
-YOLO stands for You Only Look Once. It's an object detector that uses features learned by a deep convolutional neural network to detect an object. Although we has successfully run these codes, we must understand how YOLO works. 
-### 4.1 Anchors clustering
+## How does it work?
+YOLO stands for You Only Look Once. It's a super-deep convolutional, residual neural network that performs object detection. The reason it's called YOLO is because the system only takes one input, and because the author has a sense of humour. Other approaches to object detection at the time used a segmentation algorithm first to find regions, and then fed those regions through seperate classifiers. YOLO does this all in one network, speeding up the process considerably, and even achieving higher accuracy.
+## The Grid
+Yolo starts by splitting the input image into a grid
+## 1 Anchor Boxes
+Anchor boxes in YOLO are
+## 4 Anchors clustering
 The paper suggests to use clustering on bounding box shape to find the good anchor box specialization suited for the data. more details see [here](https://nbviewer.jupyter.org/github/YunYang1994/tensorflow-yolov3/blob/master/docs/Box-Clustering.ipynb)
 ![image](./docs/images/K-means.png)
 
